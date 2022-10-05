@@ -1,0 +1,21 @@
+header{
+    font-size: 50px;
+    text-align: center;
+}
+
+.move{
+    position: relative;
+    top: 35px;
+}
+
+form{
+    text-align: center;
+    padding-top: 50px;
+}
+
+fieldset{
+    margin: auto;
+    width: 450px;
+    text-align: left;
+    
+}
