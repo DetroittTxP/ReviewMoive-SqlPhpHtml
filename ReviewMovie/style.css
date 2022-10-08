@@ -10,9 +10,16 @@ body{
 
 .move{
     position: relative;
-    top: 35px;
+    top: 37px;
+    left: 780px
+    
 }
 
+.SORTMOVIE{
+    text-align: left;
+    display: block;
+    justify-content: left;
+}
 .topic .move{
     float: left;
     text-align: center;
