@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>ActionPage</title>
     <link rel="stylesheet" href="StyleMovieType/Style.css">
 </head>
 
@@ -13,13 +13,15 @@
     $action =$pdo->prepare("SELECT * FROM movie WHERE movie_type='Action' " );
     $action->execute();
 ?>
-<body>
-
-
+<body >
     
     <div class="topic">
         <div class="move">
                 MoviesRatings
+        </div>
+        <div class="TYPE">
+            <a href="../ReviewMovie/index.html" style="color: black;">กลับไปหน้าหลัก</a>
+            
         </div>
        
         <ul class="logo">
@@ -35,16 +37,15 @@
     <?php while($row = $action->fetch()){ ?>
 
     <div class="img">
-        <img src="../img/poster.jfif" alt="" height="350px">
+        <img src="ActionIMGS/<?=$row["movie_id"]?>.jpg" height="350px">
     </div>
     <div class="information">
         ชื่อเรื่อง: <?=$row["movie_name"]?><br>
         ประเภท: <?=$row["movie_type"]?><br>
         คะเเนน: <?=$row["movie_score"]?><br>
         <br>
-        <hr>
+        
     </div>
-    
     <?php } ?>
     
 </body>
