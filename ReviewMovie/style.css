@@ -8,9 +8,11 @@ body{
     font-size: 50px;
 }
 
+
 .move{
    position: relative;
    top: 30px;
+   left: 29px;
 }
 
 .TYPE{

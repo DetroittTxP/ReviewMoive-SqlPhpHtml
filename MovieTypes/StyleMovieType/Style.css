@@ -11,9 +11,10 @@ body{
 }
 
 .move{
-   position: relative;
-   top: 30px;
-}
+    position: relative;
+    top: 30px;
+    left: 29px;
+ }
 
 .TYPE{
     color: black;
