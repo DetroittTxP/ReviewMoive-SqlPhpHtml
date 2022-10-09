@@ -44,7 +44,9 @@ body{
 }
 
 .img{
-    padding-top: 50px;
+   display: block;
+   padding: 30px;
+    
     
 }
 
