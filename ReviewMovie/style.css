@@ -9,17 +9,20 @@ body{
 }
 
 .move{
+   position: relative;
+   top: 30px;
+}
+
+.TYPE{
     position: relative;
-    top: 37px;
-    left: 780px
+    top: 20px;
+    padding: 30px;
+    font-size: 20px;
+    display: inline-block;
+    justify-content: center;
     
 }
 
-.SORTMOVIE{
-    text-align: left;
-    display: block;
-    justify-content: left;
-}
 .topic .move{
     float: left;
     text-align: center;
