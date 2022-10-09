@@ -14,12 +14,15 @@ body{
 }
 
 .TYPE{
+    color: black;
     position: relative;
     top: 20px;
     padding: 30px;
     font-size: 20px;
     display: inline-block;
     justify-content: center;
+    word-spacing: 20px;
+    
     
 }
 
