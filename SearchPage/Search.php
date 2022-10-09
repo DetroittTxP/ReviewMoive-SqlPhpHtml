@@ -49,7 +49,7 @@
         $sea->bindParam(1,$value);
         $sea->execute();      
     ?>
-
+    <br>
     <?php while($row = $sea->fetch()){ ?>
   
         <div class="information">
