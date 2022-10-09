@@ -17,7 +17,7 @@
     
     <div class="topic">
         <div class="move">
-                MoviesRatings
+            <img src="../img/LogoWeb.png" alt="" height="215px" width="100%">
         </div>
         <div class="TYPE">
             <a href="../ReviewMovie/index.html" style="color: black;">กลับไปหน้าหลัก</a>

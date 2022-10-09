@@ -11,8 +11,8 @@ body{
 
 .move{
    position: relative;
-   top: 30px;
-   left: 29px;
+   bottom: 30px;
+   right: 20px;
 }
 
 .TYPE{
