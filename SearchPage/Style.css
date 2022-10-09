@@ -11,11 +11,15 @@ body{
 }
 
 .move{
-   display: inline-block;
-   padding-top: 40px;
-   padding-left: 19px;
-   
-}
+    position: relative;
+    bottom: 30px;
+    right: 20px;
+ }
+
+ .FORM{
+    position: relative;
+    right: 145px;
+ }
 
 .TYPE{
     color: black;

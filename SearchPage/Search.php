@@ -34,11 +34,18 @@
         </ul>
     </div>
     <br><br>
-   
-    <form>
-        พิมชื่อหนังที่ต้องการจะค้นหาได้เลย: <input type="text" name="keyword">
-        <input type="submit" value="ค้นหา">
-    </form>
+
+     <div class="FORM">
+        <form> 
+            พิมชื่อหนังที่ต้องการจะค้นหาได้เลย: <br><input type="text" name="keyword">
+            <input type="submit" value="ค้นหา" class="">
+        </form>
+ 
+     </div>
+ 
+       
+  
+  
 
     <?php
         $sea =$pdo->prepare("SELECT * FROM movie WHERE movie_name LIKE ?");
