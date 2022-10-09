@@ -10,7 +10,7 @@
 </head>
 
 <?php 
-    $action =$pdo->prepare("SELECT * FROM movie ORDER BY movie_type");
+    $action =$pdo->prepare("SELECT * FROM movie WHERE movie_type='Action' " );
     $action->execute();
 ?>
 <body>
