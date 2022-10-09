@@ -51,6 +51,10 @@
     ?>
     <br>
     <?php while($row = $sea->fetch()){ ?>
+
+        <div class="img">
+            <img src="../img/ALLIMGS/<?=$row["movie_id"]?>.jpg" height="350px">
+        </div>
   
         <div class="information">
             ชื่อเรื่อง: <?=$row["movie_name"]?><br>
