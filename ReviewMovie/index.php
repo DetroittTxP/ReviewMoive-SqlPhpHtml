@@ -1,27 +1,34 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en">    
+<?php include "../Connectphp/connect.php"  ?>   
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>MainPage</title>
     <link rel="stylesheet" href="style.css">
 </head>
+<?php
+    $main = $pdo->prepare("SELECT * FROM movie");
+    $main->execute();
+?>
 <body>
+
     
     <div class="topic">
         <div class="move">
                 MoviesRatings
-        </div>
+        </div>       
 
         <div class="TYPE">
             <a href="../MovieTypes/Action.php" style="color: black;">Action</a>
-            <a href="../MovieTypes/Horror.php" style="color: black;">Horror</a>
+            <a href="#" style="color: black;">Horror</a>
             <a href="#" style="color: black;">Comedy</a>
             <a href="#" style="color: black;">Sci-Fi</a>
             <a href="#" style="color: black;">Fantasy</a>
-            <a href="../MovieTypes/Romatic.php" style="color: black;">Romantic</a><br><br>
-            <a href="../SearchPage/Search.php">กดคลิกเพื่อค้นหาได้เลย!!!</a>
+            <a href="#" style="color: black;">Romantic</a><br><br>
+            <a href="../SearchPage/Search.php">คลิกเพื่อค้นหาหนังที่ต้องการได้เลย!!</a>
         </div>
        
        
@@ -34,6 +41,12 @@
                 </li>
         </ul>
     </div>
+
+
+    <?php
+        
+
+    ?>
   
     <div class="img">
         <img src="../img/poster.jfif" alt="" height="350px">
