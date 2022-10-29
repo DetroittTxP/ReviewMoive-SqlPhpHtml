@@ -22,13 +22,15 @@
         </div>       
 
         <div class="TYPE">
-            <a href="../MovieTypes/Action.php" style="color: black;">Action</a>
-            <a href="../MovieTypes/Horror.php" style="color: black;">Horror</a>
-            <a href="../MovieTypes/Comedy.php" style="color: black;">Comedy</a>
-            <a href="../MovieTypes/SciFi.php" style="color: black;">Sci-Fi</a>
-            <a href="../MovieTypes/Fantasy.php" style="color: black;">Fantasy</a>
-            <a href="../MovieTypes/Romatic.php" style="color: black;">Romantic</a><br><br>
-            <a href="../SearchPage/Search.php">คลิกเพื่อค้นหาหนังที่ต้องการได้เลย!!</a>
+            <ul class="MENUTYPE">
+                <li><a href="../MovieTypes/Action.php" style="color: black;">Action</a></li>
+                <li><a href="../MovieTypes/Horror.php" style="color: black;">Horror</a></li>
+                <li><a href="../MovieTypes/Comedy.php" style="color: black;">Comedy</a></li>
+                <li><a href="../MovieTypes/SciFi.php" style="color: black;">Sci-Fi</a></li>
+                <li><a href="../MovieTypes/Fantasy.php" style="color: black;">Fantasy</a></li>
+                <li><a href="../MovieTypes/Romatic.php" style="color: black;">Romantic</a><br><br></li>
+            </ul>
+            <a href="../SearchPage/Search.php">กดคลิกเพื่อค้นหาได้เลย!!!</a>  
         </div>
        
        
