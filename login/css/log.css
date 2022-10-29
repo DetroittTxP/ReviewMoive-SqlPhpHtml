@@ -1,0 +1,28 @@
+form fieldset{
+    text-align: center;
+}
+
+fieldset{
+    margin: auto;
+    width: 500px;
+
+}
+
+header{
+    position: relative;
+    text-align: center;
+}
+
+legend{
+    font-size: 30px;
+    font-style: italic;
+}
+
+.text{
+    justify-content: center;
+}
+
+.button{
+    
+}
+
