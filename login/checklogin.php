@@ -16,7 +16,7 @@
         $_SESSION["username"] = $row["username"];
 
         echo "ข้อสู่ระบบสำเร็จ<br>";
-        echo "<a href='login.php'>เข้าสู่ระบบอีกครั้ง</a>";
+        echo "<a href='../ReviewMovie/index.html'>กลับไปหน้าหลัก</a>";
         echo "<br>";
         
     }
