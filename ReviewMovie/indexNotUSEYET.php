@@ -37,7 +37,7 @@
                     <a href="../register/register.html"><img src="../img/register.png" alt="" width="150" height="50"></a>
                 </li>
                 <li>
-                    <a href="../login/login.html"><img src="../img/login.png" alt="" width="100" height="40"></a>
+                    <a href="../login/login.php"><img src="../img/login.png" alt="" width="100" height="40"></a>
                 </li>
         </ul>
     </div>

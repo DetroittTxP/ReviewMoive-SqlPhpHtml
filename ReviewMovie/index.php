@@ -23,11 +23,11 @@
 
         <div class="TYPE">
             <a href="../MovieTypes/Action.php" style="color: black;">Action</a>
-            <a href="#" style="color: black;">Horror</a>
-            <a href="#" style="color: black;">Comedy</a>
-            <a href="#" style="color: black;">Sci-Fi</a>
-            <a href="#" style="color: black;">Fantasy</a>
-            <a href="#" style="color: black;">Romantic</a><br><br>
+            <a href="../MovieTypes/Horror.php" style="color: black;">Horror</a>
+            <a href="../MovieTypes/Comedy.php" style="color: black;">Comedy</a>
+            <a href="../MovieTypes/SciFi.php" style="color: black;">Sci-Fi</a>
+            <a href="../MovieTypes/Fantasy.php" style="color: black;">Fantasy</a>
+            <a href="../MovieTypes/Romatic.php" style="color: black;">Romantic</a><br><br>
             <a href="../SearchPage/Search.php">คลิกเพื่อค้นหาหนังที่ต้องการได้เลย!!</a>
         </div>
        
@@ -37,7 +37,7 @@
                     <a href="../register/register.html"><img src="../img/register.png" alt="" width="150" height="50"></a>
                 </li>
                 <li>
-                    <a href="../login/login.html"><img src="../img/login.png" alt="" width="100" height="40"></a>
+                    <a href="../login/login.php"><img src="../img/login.png" alt="" width="100" height="40"></a>
                 </li>
         </ul>
     </div>
