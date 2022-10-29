@@ -4,16 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Register</title>
     <link rel="stylesheet" href="reg.css">
+    <script>
+         let checkpassword = () =>{
+            let pass1 = document.getElementById("CheckPass1").value;
+            let pass2 = document.getElementById("CheckPass2").value;
 
+            if(pass1!=pass2){
+                alert("รหัสผ่านไม่ตรงกัน");
+                return false
+            }
+            return true;
+         }       
+    </script>
 
 </head>
 <body>
         <header>
             <img src="../img/LogoWeb.png" alt="" height="215px">
         </header>
-    <form action="RegisterMove.php" method="post">
+    <form action="RegisterMove.php" method="post" >
             <fieldset>
                 <legend>Register</legend><br>
                 <label>Username: </label>
@@ -21,10 +32,11 @@
                 <label>Password: </label>
                 <input type="password" name="password" placeholder="Password"  id="CheckPass1"> <br><br>
                 <label>Re-Password</label>
-                <input type="password" name="re-password" placeholder="Re-password" id="CheckPass2"> <br><br>
+                <input type="password" name="re-password" placeholder="Re-password" id="CheckPass2">
+                <br><br>
                 <label>Email: </label>
                 <input type="email" name="email" placeholder="Email"> <br><br>
-                <input type="submit" value="Create Account">
+                <input type="submit" value="Create Account" onclick="return checkpassword()">
             </fieldset>
     </form>
 </body>
