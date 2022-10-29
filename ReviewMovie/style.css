@@ -19,12 +19,33 @@ body{
     color: black;
     position: relative;
     top: 20px;
-    padding: 30px;
+    padding: 10px;
     font-size: 20px;
     display: inline-block;
     justify-content: center;
     word-spacing: 20px;
-    
+}
+
+.TYPE ul.MENUTYPE{
+    list-style: none;
+}
+
+.TYPE ul.MENUTYPE li{
+    float: left;
+    margin-right: 45px;
+}
+
+.TYPE ul.MENUTYPE li a{
+    text-decoration: none;
+    color: #333;
+    border-bottom: 2px solid transparent;
+    padding-bottom: 10px;
+    transition: all 0.3s ease;
+}
+
+.TYPE ul.MENUTYPE li a:hover{
+    border-bottom: 2px solid black;
+    padding-bottom: 0;
 }
 
 .topic .move{
