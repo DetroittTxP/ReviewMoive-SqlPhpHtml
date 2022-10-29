@@ -37,7 +37,7 @@
     <?php while($row = $action->fetch()){ ?>
 
     <div class="img">
-        <img src="RomanticIMGS/<?=$row["movie_name"]?>.jpg" height="350px">
+        <img src="RomanticIMGS/<?=$row["movie_id"]?>.jpg" height="350px">
     </div>
     <div class="information">
         ชื่อเรื่อง: <?=$row["movie_name"]?><br>
