@@ -54,8 +54,11 @@
             ชื่อเรื่อง: <?=$row["movie_name"]?><br>
             ประเภท: <?=$row["movie_type"]?><br>
         </div>
-        <?php } ?>             
+        
+        <?php } ?>
+         <br>          
     </div>
+    <br>
     
 </body>
 </html>

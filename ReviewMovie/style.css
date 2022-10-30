@@ -77,10 +77,12 @@ body{
 }
 
 .flex{
-    display: inline-block;
-    padding:40px;
-  
-
+    display: flex;
+    margin:30px;
+    padding-right: 200px;
+    position: relative;
+    right: 300px;
+    
 }
 
 .logo{
