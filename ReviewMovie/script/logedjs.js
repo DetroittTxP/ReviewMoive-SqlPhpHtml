@@ -3,5 +3,5 @@ let confirmlogout = () =>{
     if(ans == true){
         document.location = "index.html"
     }
-
 }
+

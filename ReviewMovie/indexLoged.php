@@ -56,7 +56,7 @@
             <img src="../img/ALLIMGS/<?=$row["movie_id"]?>.jpg" height="350px" ><br>
             ชื่อเรื่อง: <?=$row["movie_name"]?><br>
             ประเภท: <?=$row["movie_type"]?><br>
-            <a href="#">
+            <a href="">
                 <button>รีวิวคลิก!!</button>
             </a>
         </div>

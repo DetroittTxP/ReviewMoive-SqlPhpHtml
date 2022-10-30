@@ -11,10 +11,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@100&display=swap" rel="stylesheet">
+    <script src="script/loginfirst.js"></script>
 </head>
 
 <body>
-
     
     <div class="topic">
         <div class="move">
@@ -56,6 +56,9 @@
             <img src="../img/ALLIMGS/<?=$row["movie_id"]?>.jpg" height="350px" ><br>
             ชื่อเรื่อง: <?=$row["movie_name"]?><br>
             ประเภท: <?=$row["movie_type"]?><br>
+            <a href="#" onclick="return plslogin()">
+                <button>ต้องการรีวิวคลิก!</button>
+            </a>
         </div>
         
         <?php } ?>
