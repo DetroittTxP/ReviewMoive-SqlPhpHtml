@@ -14,13 +14,12 @@
         $abc->bindParam(3,$_POST["email"]);
 
         $abc->execute();
-
     ?>
 </head>
 <body>
     เพิ่มสมาชิกสำเร็จเเล้ว!!!!!
     <br>
     <br>
-    <a href="../ReviewMovie/index.html">กลับไปหน้าหลัก</a>
+    <a href="../ReviewMovie/index.php">กลับไปหน้าหลัก</a>
 </body>
 </html>
