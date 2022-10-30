@@ -1,5 +1,6 @@
 form fieldset{
     text-align: center;
+    font-family: 'Kanit', sans-serif;
 }
 
 fieldset{
@@ -30,4 +31,10 @@ input[type="submit"]:active{
     top: 3px;
     box-shadow: inset 0px 1px 0px #2ab7ec, 0px 2px 0px 0px #31524d, 0px 5px 3px #999;
 }
+
+form{
+    font-weight: bolder;
+    font-family: 'Kanit', sans-serif;
+}
+
 

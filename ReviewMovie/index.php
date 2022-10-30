@@ -8,6 +8,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>MainPage</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@100&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -56,9 +59,9 @@
         </div>
         
         <?php } ?>
-         <br>          
+                 
     </div>
-    <br>
+  
     
 </body>
 </html>

@@ -1,6 +1,9 @@
 body{
     text-align: center;
     background-color: beige;
+    font-family: 'Kanit', sans-serif;
+    font-weight: bolder;
+    
 }
 .topic{
     width: 100%;
