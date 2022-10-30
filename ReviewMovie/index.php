@@ -55,7 +55,7 @@
              while($row=$main->fetch()){
         ?>
         <div style="padding:30px"; text-align:center;>
-            <img src="../img/ALLIMGS/<?=$row["movie_id"]?>.jpg" height="350px" ><br>
+            <img src="../img/ALLIMGS/<?=$row["movie_name"]?>.jpg" height="350px" ><br>
             ชื่อเรื่อง: <?=$row["movie_name"]?><br>
             ประเภท: <?=$row["movie_type"]?><br>
             คะเเนน: <?=$row["movie_score"]?><br>
@@ -78,7 +78,7 @@
             while($row=$main2->fetch()){
         ?>
             <div style="padding:30px"; text-align:center;>
-            <img src="../img/ALLIMGS/<?=$row["movie_id"]?>.jpg" height="350px" ><br>
+            <img src="../img/ALLIMGS/<?=$row["movie_name"]?>.jpg" height="350px" ><br>
             ชื่อเรื่อง: <?=$row["movie_name"]?><br>
             ประเภท: <?=$row["movie_type"]?><br>
             <a href="#" onclick="return plslogin()">
