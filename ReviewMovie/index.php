@@ -9,10 +9,7 @@
     <title>MainPage</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<?php
-    $main = $pdo->prepare("SELECT * FROM movie");
-    $main->execute();
-?>
+
 <body>
 
     
@@ -44,59 +41,21 @@
         </ul>
     </div>
 
-
-    <?php
-        
-
-    ?>
-  
-    <div class="img">
-        <img src="../img/poster.jfif" alt="" height="350px">
+    <div class="flex">
+        <?php
+            $main = $pdo->prepare("SELECT * FROM movie");
+            $main->execute();
+        ?>
+        <?php
+             while($row=$main->fetch()){
+        ?>
+        <div style="padding:30px"; text-align:center;>
+            <img src="../img/ALLIMGS/<?=$row["movie_id"]?>.jpg" height="350px" ><br>
+            ชื่อเรื่อง: <?=$row["movie_name"]?><br>
+            ประเภท: <?=$row["movie_type"]?><br>
+        </div>
+        <?php } ?>             
     </div>
-    <div class="information">
-        ชื่อหนัง?<br>
-        วันที่เข้าฉาย?<br>
-        Rateing?
-    </div>
-    <div class="img">
-        <img src="../img/poster.jfif" alt="" height="350px">
-    </div>
-    <div class="information">
-        ชื่อหนัง?<br>
-        วันที่เข้าฉาย?<br>
-        Rateing?
-    </div>
-    <div class="img">
-        <img src="../img/poster.jfif" alt="" height="350px">
-    </div>
-    <div class="information">
-        ชื่อหนัง?<br>
-        วันที่เข้าฉาย?<br>
-        Rateing?
-    </div>
-    <div class="img">
-        <img src="../img/poster.jfif" alt="" height="350px">
-    </div>
-    <div class="information">
-        ชื่อหนัง?<br>
-        วันที่เข้าฉาย?<br>
-        Rateing?
-    </div>
-    <div class="img">
-        <img src="../img/poster.jfif" alt="" height="350px">
-    </div>
-    <div class="information">
-        ชื่อหนัง?<br>
-        วันที่เข้าฉาย?<br>
-        Rateing?
-    </div>
-    <div class="img">
-        <img src="../img/poster.jfif" alt="" height="350px">
-    </div>
-    <div class="information">
-        ชื่อหนัง?<br>
-        วันที่เข้าฉาย?<br>
-        Rateing?
-    </div>
+    
 </body>
 </html>

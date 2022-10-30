@@ -1,5 +1,6 @@
 body{
     text-align: center;
+    background-color: beige;
 }
 .topic{
     width: 100%;
@@ -74,3 +75,15 @@ body{
 .information{
     display: inline-flex;
 }
+
+.flex{
+    display: inline-block;
+    padding:40px;
+  
+
+}
+
+.logo{
+    font-size: 45px;
+}
+

@@ -11,5 +11,5 @@
 
     session_destroy();
 
-    header("location:../ReviewMovie/index.html");
+    header("location:../ReviewMovie/index.php");
     ?>

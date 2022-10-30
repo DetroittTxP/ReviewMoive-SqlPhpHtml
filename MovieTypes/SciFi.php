@@ -20,7 +20,7 @@
                 MoviesRatings
         </div>
         <div class="TYPE">
-            <a href="../ReviewMovie/index.html" style="color: black;">กลับไปหน้าหลัก</a>
+            <a href="../ReviewMovie/index.php" style="color: black;">กลับไปหน้าหลัก</a>
             
         </div>
        

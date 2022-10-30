@@ -25,7 +25,7 @@
                         <input type="text" placeholder="Please Enter Number" pattern="4786"><br><br>
                         
                         <div class="button">
-                            <input type="submit" value="Login" width="30px" >                   
+                            <input type="submit" value="Login" width="30px" ><br><br>          
                             <div class="regis"><a href="../register/register.html">สมัครสมาชิก</a></div>
                         </div>
                         
