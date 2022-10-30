@@ -39,7 +39,7 @@
                     <a href="../register/register.html"><img src="../img/register.png" alt="" width="150" height="50"></a>
                 </li>
                 <li>
-                    <a href="../login/login.php"><img src="../img/login.png" alt="" width="100" height="40"></a>
+                    <a href="../login/login.php"><img src="../img/login.png" alt="" width="100" height="50"></a>
                 </li>
         </ul>
     </div>
@@ -55,9 +55,10 @@
         <div style="padding:30px"; text-align:center;>
             <img src="../img/ALLIMGS/<?=$row["movie_id"]?>.jpg" height="350px" ><br>
             ชื่อเรื่อง: <?=$row["movie_name"]?><br>
-            ประเภท: <?=$row["movie_type"]?><br>          
-            <button onclick="return plslogin()" >ต้องการรีวิวคลิก!</button>
-            
+            ประเภท: <?=$row["movie_type"]?><br>
+            <a href="#" onclick="return plslogin()">
+                <button>ต้องการรีวิวคลิก!</button>
+            </a>
         </div>
         
         <?php } ?>
