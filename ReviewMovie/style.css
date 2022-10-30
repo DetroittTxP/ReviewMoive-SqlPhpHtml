@@ -81,11 +81,17 @@ body{
 
 .flex{
     display: flex;
-    margin:30px;
-    padding-right: 200px;
-    position: relative;
-    right: 300px;
-    
+    justify-content: center;
+    margin: auto;
+    padding-right: 270px;
+}
+
+
+.flex2{
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    padding-right: 70px;
 }
 
 .logo{

@@ -30,7 +30,7 @@
                 <li><a href="../MovieTypes/Fantasy.php" style="color: black;">Fantasy</a></li>
                 <li><a href="../MovieTypes/Romatic.php" style="color: black;">Romantic</a><br><br></li>
             </ul>
-            <a href="../SearchPage/Search.php">กดคลิกเพื่อค้นหาได้เลย!!!</a>  
+            <a href="../SearchPage/Search.php">ค้นหาหนังที่ต้องการได้เลยคลิก!</a>  
         </div>
        
        
@@ -44,9 +44,11 @@
         </ul>
     </div>
 
+    <h2 style="text-align: center; ">หนังมาเเรงช่วงนี้!!!!</h2>
+
     <div class="flex">
         <?php
-            $main = $pdo->prepare("SELECT * FROM movie");
+            $main = $pdo->prepare("SELECT * FROM movie ORDER BY movie_score DESC LIMIT 0,5;");
             $main->execute();
         ?>
         <?php
@@ -56,14 +58,38 @@
             <img src="../img/ALLIMGS/<?=$row["movie_id"]?>.jpg" height="350px" ><br>
             ชื่อเรื่อง: <?=$row["movie_name"]?><br>
             ประเภท: <?=$row["movie_type"]?><br>
+            คะเเนน: <?=$row["movie_score"]?><br>
             <a href="#" onclick="return plslogin()">
                 <button>ต้องการรีวิวคลิก!</button>
             </a>
         </div>
-        
-        <?php } ?>
-                 
+        <?php } ?> 
     </div>
+    <hr style="border: 1px solid black;">
+
+    <h2 style="text-align: center; ">หนังดีอีกมากมาย</h2>
+
+    <div class="flex2">
+        <?php 
+            $main2 = $pdo->prepare("SELECT * FROM movie WHERE movie_id <= 9");
+            $main2->execute();
+        ?>
+        <?php
+            while($row=$main2->fetch()){
+        ?>
+            <div style="padding:30px"; text-align:center;>
+            <img src="../img/ALLIMGS/<?=$row["movie_id"]?>.jpg" height="350px" ><br>
+            ชื่อเรื่อง: <?=$row["movie_name"]?><br>
+            ประเภท: <?=$row["movie_type"]?><br>
+            <a href="#" onclick="return plslogin()">
+                <button>ต้องการรีวิวคลิก!</button>
+            </a>
+        </div>
+
+
+        <?php } ?>
+    </div>
+    
   
     
 </body>
