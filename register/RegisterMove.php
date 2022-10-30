@@ -15,15 +15,11 @@
 
         $abc->execute();
     ?>
-
 </head>
 <body>
-    <script>
-        window.onload = ()=>{
-            if(window.confirm("สมัครสมาชิกสำเร็จเเล้วคลิก OK เพื่อไปที่หน้าเข้าสู่ระบบ")){
-                window.location.href='../login/login.php';
-             }
-        }
-    </script>
+    เพิ่มสมาชิกสำเร็จเเล้ว!!!!!
+    <br>
+    <br>
+    <a href="../ReviewMovie/index.php">กลับไปหน้าหลัก</a>
 </body>
 </html>
