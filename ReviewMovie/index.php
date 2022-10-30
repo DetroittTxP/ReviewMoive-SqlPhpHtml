@@ -71,7 +71,7 @@
 
     <div class="flex2">
         <?php 
-            $main2 = $pdo->prepare("SELECT * FROM movie WHERE movie_id <= 9");
+            $main2 = $pdo->prepare("SELECT * FROM movie WHERE movie_id <= 8");
             $main2->execute();
         ?>
         <?php
@@ -85,7 +85,6 @@
                 <button>ต้องการรีวิวคลิก!</button>
             </a>
         </div>
-
 
         <?php } ?>
     </div>
