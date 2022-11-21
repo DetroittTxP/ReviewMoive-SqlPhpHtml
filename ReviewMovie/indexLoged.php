@@ -84,8 +84,9 @@
             <img src="../img/ALLIMGS/<?=$row["movie_id"]?>.jpg" height="350px" ><br>
                 ชื่อเรื่อง: <?=$row["movie_name"]?><br>
                 ประเภท: <?=$row["movie_type"]?><br>
+                คะแนน: <?=$row["movie_score"]?><br>
                 <a href="../reviewpage/reviewpage.php?movie_id=<?=$row["movie_id"]?>">
-                    <img src="img/review-button-png-hi.png" width = "100px">
+                    <img src="img/review-button-png-hi.png" width = "70px">
                 </a>
         </div>
                 
