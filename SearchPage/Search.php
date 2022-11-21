@@ -32,7 +32,10 @@
 <body >
     <div class="topic">
         <div class="move">
-            <img src="../img/LogoWeb.png" alt="" height="215px" width="100%">
+            <a href="../ReviewMovie/index.php">
+                <img src="../img/LogoWeb.png" alt="" height="215px" width="100%">
+            </a>
+            
         </div>
         <div class="TYPE">
             <a href="../ReviewMovie/index.php" style="color: black;">กลับไปหน้าหลัก</a>
