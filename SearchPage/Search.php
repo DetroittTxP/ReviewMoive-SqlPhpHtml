@@ -7,12 +7,28 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Searchpage</title>
     <link rel="stylesheet" href="Style.css">
+    <script>
+        let send=()=>{
+            request = new XMLHttpRequest();
+            request.onreadystatechange = showResult;
+
+            let keyword = document.getElementById("keyword").value;
+            let url = "process.php?keyword=" + keyword;
+            request.open("GET",url,true);
+            request.send(null);
+        }
+
+        let showResult = () =>{
+            if(request.readyState == 4){
+                if(request.status == 200){
+                    document.getElementById("result").innerHTML = request.responseText;
+                }
+            }
+        }
+    </script>
+    
 </head>
 
-<?php 
-    $action =$pdo->prepare("SELECT * FROM movie WHERE movie_type='Action' " );
-    $action->execute();
-?>
 <body >
     <div class="topic">
         <div class="move">
@@ -35,42 +51,18 @@
     <br><br>
 
      <div class="FORM">
-        <form> 
-            พิมชื่อหนังที่ต้องการจะค้นหาได้เลย: <br><input type="text" name="keyword">
-            <input type="submit" value="ค้นหา" class="">
-        </form>
- 
+            พิมชื่อหนังที่ต้องการจะค้นหาได้เลย: <br>
+            <input type="text" id="keyword" onkeyup="send()">
      </div>
- 
-       
+
+     <div class="img" id="result">  </div>
+
+     <div class="information" id="result"></div>
+    
   
   
 
-    <?php
-        $sea =$pdo->prepare("SELECT * FROM movie WHERE movie_name LIKE ?");
-
-        if(!empty($_GET))
-            $value = '%'.$_GET["keyword"]. '%';
-
-        $sea->bindParam(1,$value);
-        $sea->execute();      
-    ?>
-    <br>
-    <?php while($row = $sea->fetch()){ ?>
-
-        <div class="img">
-            <img src="../img/ALLIMGS/<?=$row["movie_id"]?>.jpg" height="350px">
-        </div>
-  
-        <div class="information">
-            ชื่อเรื่อง: <?=$row["movie_name"]?><br>
-            ประเภท: <?=$row["movie_type"]?><br>
-            คะเเนน: <?=$row["movie_score"]?><br>
-            <br>
-        </div>
-        <br>
-
-    <?php } ?>
+    
     
 </body>
 </html>

@@ -55,5 +55,5 @@ body{
 }
 
 .information{
-    display: inline-flex;
+    display: block;
 }
