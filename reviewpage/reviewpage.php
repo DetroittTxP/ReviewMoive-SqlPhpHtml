@@ -15,7 +15,7 @@
 <body>
     <div class="topic">
             <div class="move">
-                <a href="../ReviewMovie/index.php">
+                <a href="../ReviewMovie/indexLoged.php">
                      <img src="../img/LogoWeb.png" alt="" height="215px" width="100%">
                 </a>
                 
