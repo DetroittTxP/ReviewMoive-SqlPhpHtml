@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">    
-<?php include "../Connectphp/connect.php"  ?>   
+<?php
+    $conn = mysqli_connect("localhost", "root", "");
+    if ($conn) {
+        mysqli_select_db($conn,"movierating");
+        mysqli_query($conn,"SET NAMES utf8");
+    } else {
+        echo mysql_errno();
+    }
+?>   
 <head>
 
     <meta charset="UTF-8">
@@ -48,11 +56,11 @@
 
     <div class="flex">
         <?php
-            $main = $pdo->prepare("SELECT * FROM movie ORDER BY movie_score DESC LIMIT 0,5;");
-            $main->execute();
+             $sql= "SELECT * FROM movie ORDER BY movie_score DESC LIMIT 0,5;";
+             $objQuery = mysqli_query($conn,$sql);
         ?>
         <?php
-             while($row=$main->fetch()){
+             while($row = mysqli_fetch_array($objQuery)){
         ?>
         <div style="padding:30px"; text-align:center;>
             <img src="../img/ALLIMGS/<?=$row["movie_name"]?>.jpg" height="350px" ><br>
@@ -71,11 +79,11 @@
 
     <div class="flex2">
         <?php 
-            $main2 = $pdo->prepare("SELECT * FROM movie WHERE movie_id <= 8");
-            $main2->execute();
+            $sql ="SELECT * FROM movie WHERE movie_id <= 8";
+            $objQuery = mysqli_query($conn,$sql);
         ?>
         <?php
-            while($row=$main2->fetch()){
+            while($row = mysqli_fetch_array($objQuery)){
         ?>
             <div style="padding:30px"; text-align:center;>
             <img src="../img/ALLIMGS/<?=$row["movie_name"]?>.jpg" height="350px" ><br>

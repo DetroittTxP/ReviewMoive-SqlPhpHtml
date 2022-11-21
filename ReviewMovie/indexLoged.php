@@ -11,10 +11,37 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@100&display=swap" rel="stylesheet">
-    <script src="script/logedjs.js"></script>
+    <script>
+        let confirmlogout = () =>{
+            let ans = confirm("ต้องการออกจากระบบใช้หรือไม่");
+            if(ans == true){
+                document.location = "index.php"
+            }
+        }
+
+
+        let send=()=>{
+            request = new XMLHttpRequest();
+            request.onreadystatechange = showResult;
+
+            let keyword = document.getElementById("keyword").value;
+            let url = "indexlogedajax.php?keyword=" + keyword;
+            request.open("GET",url,true);
+            request.send(null);
+        }
+
+        let showResult = () =>{
+            if(request.readyState == 4){
+                if(request.status == 200){
+                    document.getElementById("result").innerHTML = request.responseText;
+                }
+            }
+        }
+    </script>
     
 </head>
 <body>
+
     
 <div class="topic">
         <div class="move">
@@ -30,7 +57,8 @@
                 <li><a href="../MovieTypes/Fantasy.php" style="color: black;">Fantasy</a></li>
                 <li><a href="../MovieTypes/Romatic.php" style="color: black;">Romantic</a><br><br></li>
             </ul>
-            <a href="../SearchPage/Search.php">กดคลิกเพื่อค้นหาได้เลย!!!</a>  
+            พิมชื่อหนังที่ต้องการได้เลย
+            <input type="text" id="keyword" onkeyup="send()">
         </div>
        
        
@@ -52,14 +80,17 @@
         <?php
              while($row=$main->fetch()){
         ?>
-        <div style="padding:30px"; text-align:center;>
+        <div style="padding:30px"; text-align:center; id="result">
             <img src="../img/ALLIMGS/<?=$row["movie_id"]?>.jpg" height="350px" ><br>
-            ชื่อเรื่อง: <?=$row["movie_name"]?><br>
-            ประเภท: <?=$row["movie_type"]?><br>
-            <a href="">
-                <button>รีวิวคลิก!!</button>
-            </a>
+                ชื่อเรื่อง: <?=$row["movie_name"]?><br>
+                ประเภท: <?=$row["movie_type"]?><br>
+                <a href="../reviewpage/reviewpage.php?movie_id=<?=$row["movie_id"]?>">
+                    <button>รีวิวคลิก!!</button>
+                </a>
         </div>
+                
+
+            
         <?php } ?>             
     </div>
 
