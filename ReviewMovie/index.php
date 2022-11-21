@@ -70,7 +70,7 @@
             ประเภท: <?=$row["movie_type"]?><br>
             คะเเนน: <?=$row["movie_score"]?><br>
             <a href="#" onclick="return plslogin()">
-                  <img src="img/review-button-png-hi.png" width = "100px">
+                  <img src="img/review-button-png-hi.png" width = "70px">
             </a>
         </div>
         <?php } ?> 
@@ -91,8 +91,9 @@
             <img src="../img/ALLIMGS/<?=$row["movie_name"]?>.jpg" height="350px" ><br>
             ชื่อเรื่อง: <?=$row["movie_name"]?><br>
             ประเภท: <?=$row["movie_type"]?><br>
+            คะเเนน: <?=$row["movie_score"]?><br>
             <a href="#" onclick="return plslogin()">
-                <img src="img/review-button-png-hi.png" width = "100px">
+                <img src="img/review-button-png-hi.png" width = "70px">
             </a>
         </div>
 
