@@ -48,13 +48,16 @@
              <img src="../img/ALLIMGS/<?=$ken?>.jpg" height="350px" ><br>
         </div>
 
+        <?php $movieid = $_GET["movie_id"]?>
+
         <form action="reviewprocess.php" method="post">
             เขียนข้อความรีวิวของคุณลงไปได้เลย: 
             <br>
-            <input type="hidden" name="movie_id" value="<?=$row["movie_id"]?>">
+            <input type="hidden" name="movie_id" value="<?=$movieid?>">
             <input type="hidden" name="username" value="<?=$_SESSION["username"]?>">
-            <textarea name="#" rows="5" cols="40"></textarea><br class="flex">
-            คะเเนน 1-20 <input type="number" name="#" style="width: 30px;" pattern="^[0-9]{1,2}$" maxlength="2"  >
+            <textarea name="moive_comment" rows="5" cols="40"></textarea><br class="flex">
+            คะเเนน 0-20 
+            <input type="number" name="movie_score" style="width: 30px;" pattern="^[0-9]{1,2}$" maxlength="2"  >
             <br>
             <br>
             <input type="submit" value="ส่งรีวิว">
