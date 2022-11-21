@@ -85,7 +85,7 @@
                 ชื่อเรื่อง: <?=$row["movie_name"]?><br>
                 ประเภท: <?=$row["movie_type"]?><br>
                 <a href="../reviewpage/reviewpage.php?movie_id=<?=$row["movie_id"]?>">
-                    <button>รีวิวคลิก!!</button>
+                    <img src="img/review-button-png-hi.png" width = "100px">
                 </a>
         </div>
                 

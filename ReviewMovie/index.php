@@ -68,7 +68,7 @@
             ประเภท: <?=$row["movie_type"]?><br>
             คะเเนน: <?=$row["movie_score"]?><br>
             <a href="#" onclick="return plslogin()">
-                <button>ต้องการรีวิวคลิก!</button>
+                  <img src="img/review-button-png-hi.png" width = "100px">
             </a>
         </div>
         <?php } ?> 
@@ -90,7 +90,7 @@
             ชื่อเรื่อง: <?=$row["movie_name"]?><br>
             ประเภท: <?=$row["movie_type"]?><br>
             <a href="#" onclick="return plslogin()">
-                <button>ต้องการรีวิวคลิก!</button>
+                <img src="img/review-button-png-hi.png" width = "100px">
             </a>
         </div>
 
