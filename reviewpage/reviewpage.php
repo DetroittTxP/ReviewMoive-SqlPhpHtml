@@ -44,19 +44,19 @@
             </ul>
     </div>
 
-    <?php $ken = $_GET["movie_id"]?>
+  
 
     <div class="flex">
         <div class="img">
-             <img src="../img/ALLIMGS/<?=$ken?>.jpg" height="350px" ><br>
+             <img src="../img/ALLIMGS/<?=$_GET["movie_id"]?>.jpg" height="350px" ><br>
         </div>
 
-        <?php $movieid = $_GET["movie_id"]?>
+      
 
         <form action="reviewprocess.php" method="post">
             เขียนข้อความรีวิวของคุณลงไปได้เลย: 
             <br>
-            <input type="hidden" name="movie_id" value="<?=$movieid?>">
+            <input type="hidden" name="movie_id" value="<?=$_GET["movie_id"]?>">
             <input type="hidden" name="username" value="<?=$_SESSION["username"]?>">
             <textarea name="moive_comment" rows="5" cols="40"></textarea><br class="flex">
             คะเเนน 0-20 
