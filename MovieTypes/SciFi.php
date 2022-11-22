@@ -21,17 +21,13 @@
                    <img src="../img/LogoWeb.png" alt="" height="215px" width="100%">
              </a>
         </div>
-        <div class="TYPE">
-            <a href="../ReviewMovie/index.php" style="color: black;">กลับไปหน้าหลัก</a>
-            
-        </div>
        
         <ul class="logo">
                 <li>
-                    <a href="../register/register.html"><img src="../img/Register2.png" alt="" width="150" height="50"></a>
+                    <a href="../register/webregister.php"><img src="../img/Register2.png" alt="" width="150" height="50"></a>
                 </li>
                 <li>
-                    <a href="../login/login.php"><img src="../img/Login2.png" alt="" width="100" height="50"></a>
+                    <a href="../login/weblogin.php"><img src="../img/Login2.png" alt="" width="100" height="50"></a>
                 </li>
         </ul>
     </div>
@@ -44,7 +40,7 @@
     <div class="information">
         ชื่อเรื่อง: <?=$row["movie_name"]?><br>
         ประเภท: <?=$row["movie_type"]?><br>
-        คะเเนน: <?=$row["movie_score"]?><br>
+
         <br>
         
     </div>
