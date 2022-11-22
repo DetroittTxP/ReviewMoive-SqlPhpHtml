@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 21, 2022 at 08:00 PM
--- Server version: 10.4.24-MariaDB
--- PHP Version: 8.1.6
+-- Generation Time: Nov 22, 2022 at 07:25 AM
+-- Server version: 10.4.25-MariaDB
+-- PHP Version: 8.1.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -39,13 +39,15 @@ CREATE TABLE `comment` (
 --
 
 INSERT INTO `comment` (`movie_id`, `username`, `movie_comment`, `movie_score`) VALUES
-(16, 'kritkorn', 'หนังกากมากครับเอาไป 1', 1),
-(17, 'Paramee', 'หนังดีมากครับไอ่สัส', 2),
-(26, 'kritkorn', 'หนังดีมากครับสัส', 0),
-(14, 'kritkorn', 'หนังกากมากไอเคนไอเชี่ยเคนไอสัส', -21),
-(16, 'kritkorn', '32', 23),
-(16, 'minecraftpond', 'ไม่ชอบ', 1),
-(23, 'minecraftpond', 'เก่งมากขอบใจ', 2);
+(16, 'kritkorn', 'สนุกมากกกก', 8),
+(17, 'kritkorn', 'เยี่ยมจริงๆ', 5),
+(17, 'Paramee', 'แย่', 2),
+(16, 'Paramee', 'ชอบมากก', 7),
+(19, 'Paramee', 'มันมาก', 4),
+(15, 'Paramee', 'พระเอกหล่อ', 9),
+(17, 'KritProm', 'แจ๋ว', 6),
+(14, 'KritProm', 'สุดยอดด', 7),
+(17, 'KritProm', 'ไม่ชอบรถเลย', 2);
 
 -- --------------------------------------------------------
 
@@ -69,7 +71,8 @@ INSERT INTO `member` (`member_id`, `username`, `password`, `email`) VALUES
 (2, 'Peerawut', '236224', 'Peerawut@gmail.com'),
 (3, 'Paramee', '123456', 'Pomme@gmail.com'),
 (4, 'KritProm', '223456', 'Sumsan@gmail.com'),
-(5, 'minecraftpond', '123456', 'KENZA@hotmail.com');
+(5, 'minecraftpond', '123456', 'KENZA@hotmail.com'),
+(6, 'PEERAUT', '123456', 'esus@hotmail.com');
 
 -- --------------------------------------------------------
 
@@ -80,45 +83,44 @@ INSERT INTO `member` (`member_id`, `username`, `password`, `email`) VALUES
 CREATE TABLE `movie` (
   `movie_id` int(30) NOT NULL,
   `movie_name` varchar(100) NOT NULL,
-  `movie_type` varchar(50) NOT NULL,
-  `movie_score` int(20) DEFAULT NULL
+  `movie_type` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `movie`
 --
 
-INSERT INTO `movie` (`movie_id`, `movie_name`, `movie_type`, `movie_score`) VALUES
-(1, 'MINIONS 2', 'Comedy', 0),
-(2, 'THE MEDIUM', 'Horror', 0),
-(3, 'JUMANJI', 'Comedy', 0),
-(4, 'IT', 'Horror', 0),
-(5, 'HANGOVER', 'Comedy', 0),
-(6, 'VENOM', 'Action', 0),
-(7, 'MORTAL ENGINE', 'Fantasy', 0),
-(8, 'FREE GUY', 'Comedy', 0),
-(9, 'TED 2', 'Comedy', 0),
-(10, 'IT 2', 'Horror', 0),
-(11, 'THE DARK TOWER', 'Fantasy', 0),
-(12, 'TEXAS CHAINSAW', 'Horror', 0),
-(13, 'MIDSOMMAR', 'Horror', 0),
-(14, 'TOP GUN MAVERICK', 'Action', 0),
-(15, 'THE GRAY MAN', 'Action', 0),
-(16, 'SPIDERMAN NO WAY HOME', 'Fantasy', 0),
-(17, 'FAST & FURIOUS 7', 'Action', 0),
-(18, 'HOME STAY', 'Fantasy', 0),
-(19, 'THE BATMAN', 'Action', 0),
-(20, 'MALEFICENT: MISTRESS OF EVIL', 'Fantasy', 0),
-(21, 'READY PLAYER ONE', 'SCI-FI', 0),
-(22, '365 DAYS', 'Romantic', 0),
-(23, 'BLADE RUNNER 2049', 'SCI-FI', 0),
-(24, 'FIFTY SHADES OF GREY', 'Romantic', 0),
-(25, 'AVATAR', 'SCI-FI', 0),
-(26, 'BROTHER OF THE YEARS', 'Romantic', 0),
-(27, 'PACIFIC RIM', 'SCI-FI', 0),
-(28, 'REDEEMING LOVE', 'Romantic', 0),
-(29, 'JURASSIC WORLD : DOMINION', 'SCI-FI', 0),
-(30, 'ME BEFORE YOU', 'Romantic', 0);
+INSERT INTO `movie` (`movie_id`, `movie_name`, `movie_type`) VALUES
+(1, 'MINIONS 2', 'Comedy'),
+(2, 'THE MEDIUM', 'Horror'),
+(3, 'JUMANJI', 'Comedy'),
+(4, 'IT', 'Horror'),
+(5, 'HANGOVER', 'Comedy'),
+(6, 'VENOM', 'Action'),
+(7, 'MORTAL ENGINE', 'Fantasy'),
+(8, 'FREE GUY', 'Comedy'),
+(9, 'TED 2', 'Comedy'),
+(10, 'IT 2', 'Horror'),
+(11, 'THE DARK TOWER', 'Fantasy'),
+(12, 'TEXAS CHAINSAW', 'Horror'),
+(13, 'MIDSOMMAR', 'Horror'),
+(14, 'TOP GUN MAVERICK', 'Action'),
+(15, 'THE GRAY MAN', 'Action'),
+(16, 'SPIDERMAN NO WAY HOME', 'Fantasy'),
+(17, 'FAST & FURIOUS 7', 'Action'),
+(18, 'HOME STAY', 'Fantasy'),
+(19, 'THE BATMAN', 'Action'),
+(20, 'MALEFICENT: MISTRESS OF EVIL', 'Fantasy'),
+(21, 'READY PLAYER ONE', 'SCI-FI'),
+(22, '365 DAYS', 'Romantic'),
+(23, 'BLADE RUNNER 2049', 'SCI-FI'),
+(24, 'FIFTY SHADES OF GREY', 'Romantic'),
+(25, 'AVATAR', 'SCI-FI'),
+(26, 'BROTHER OF THE YEARS', 'Romantic'),
+(27, 'PACIFIC RIM', 'SCI-FI'),
+(28, 'REDEEMING LOVE', 'Romantic'),
+(29, 'JURASSIC WORLD : DOMINION', 'SCI-FI'),
+(30, 'ME BEFORE YOU', 'Romantic');
 
 -- --------------------------------------------------------
 
@@ -162,7 +164,7 @@ ALTER TABLE `username`
 -- AUTO_INCREMENT for table `member`
 --
 ALTER TABLE `member`
-  MODIFY `member_id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `member_id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `movie`
