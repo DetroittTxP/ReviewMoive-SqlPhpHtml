@@ -78,7 +78,7 @@
 
     <div class="flex">
         <?php
-            $main = $pdo->prepare("SELECT * FROM movie JOIN comment");
+            $main = $pdo->prepare("SELECT * FROM movie WHERE movie_id <=10");
             $main->execute();
         ?>
         <?php
@@ -88,7 +88,6 @@
             <img src="../img/ALLIMGS/<?=$row["movie_id"]?>.jpg" height="350px" ><br>
                 ชื่อเรื่อง: <?=$row["movie_name"]?><br>
                 ประเภท: <?=$row["movie_type"]?><br>
-                คะเเนน: <?=$row["movie_score"]?><br>
                 <a href="../reviewpage/reviewpage.php?movie_id=<?=$row["movie_id"]?>">
                     <img src="img/review-button-png-hi.png" width = "70px">
                 </a>
@@ -98,6 +97,59 @@
             
         <?php } ?>             
     </div>
+    <br>
+    <div class="flex">    
+        
+        <?php
+            $sec = $pdo->prepare("SELECT * FROM movie WHERE movie_id > 10 AND movie_id <=20");
+            $sec->execute();
+        ?>
+        
+        <?php
+                while($row=$sec->fetch()){
+            ?>
+            <div style="padding:30px"; text-align:center; id="result">
+                <img src="../img/ALLIMGS/<?=$row["movie_id"]?>.jpg" height="350px" ><br>
+                    ชื่อเรื่อง: <?=$row["movie_name"]?><br>
+                    ประเภท: <?=$row["movie_type"]?><br>
+                    <a href="../reviewpage/reviewpage.php?movie_id=<?=$row["movie_id"]?>">
+                        <img src="img/review-button-png-hi.png" width = "70px">
+                    </a>
+            </div>
+                    
+            
+                
+            <?php } ?>             
+   
+
+     </div>
+     <br>
+
+     <div class="flex">    
+        
+        <?php
+            $sec = $pdo->prepare("SELECT * FROM movie WHERE movie_id > 20");
+            $sec->execute();
+        ?>
+        
+        <?php
+                while($row=$sec->fetch()){
+            ?>
+            <div style="padding:30px"; text-align:center; id="result">
+                <img src="../img/ALLIMGS/<?=$row["movie_id"]?>.jpg" height="350px" ><br>
+                    ชื่อเรื่อง: <?=$row["movie_name"]?><br>
+                    ประเภท: <?=$row["movie_type"]?><br>
+                    <a href="../reviewpage/reviewpage.php?movie_id=<?=$row["movie_id"]?>">
+                        <img src="img/review-button-png-hi.png" width = "70px">
+                    </a>
+            </div>
+                    
+            
+                
+            <?php } ?>             
+   
+
+     </div>
 
     
   
