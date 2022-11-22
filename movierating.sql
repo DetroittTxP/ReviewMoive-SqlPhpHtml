@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 22, 2022 at 07:25 AM
+-- Generation Time: Nov 22, 2022 at 10:36 AM
 -- Server version: 10.4.25-MariaDB
 -- PHP Version: 8.1.10
 
@@ -47,7 +47,52 @@ INSERT INTO `comment` (`movie_id`, `username`, `movie_comment`, `movie_score`) V
 (15, 'Paramee', 'พระเอกหล่อ', 9),
 (17, 'KritProm', 'แจ๋ว', 6),
 (14, 'KritProm', 'สุดยอดด', 7),
-(17, 'KritProm', 'ไม่ชอบรถเลย', 2);
+(17, 'KritProm', 'ไม่ชอบรถเลย', 2),
+(1, 'Peerawut', 'ดูเพลินมาก', 7),
+(3, 'Peerawut', 'สนุกมากๆลุ้นทั้งเรื่องเลย', 9),
+(5, 'Peerawut', 'เพลินมากกกกก ประทับใจ', 6),
+(6, 'Peerawut', 'เร้าใจสุดๆ', 7),
+(7, 'Peerawut', 'ยิงทั้งเรื่อง เพลินตาาาา', 5),
+(8, 'minecraftpond', 'สนุกมากๆๆ', 10),
+(9, 'minecraftpond', 'ขำทั้งเรื่องเลยยยย', 8),
+(10, 'minecraftpond', 'น่ากลัวมากกก', 6),
+(2, 'minecraftpond', 'จบแบบงงๆ ', 3),
+(11, 'minecraftpond', 'สนุกจัดๆๆ', 7),
+(12, 'minecraftpond', 'โคตรเท่เลยคร้าบบบ', 7),
+(13, 'minecraftpond', 'เศร้ามาก แงงง', 8),
+(14, 'minecraftpond', 'เครื่องบินโคตรเท่เลยครับ', 10),
+(15, 'minecraftpond', 'เพลินตา เพลินใจมากๆ', 8),
+(16, 'minecraftpond', 'Peter โคตรหล่อ', 7),
+(16, 'PEERAUT', 'สนุกโคตรๆเลยครับ', 10),
+(17, 'PEERAUT', 'Dom ขับอย่างเท่', 8),
+(18, 'PEERAUT', 'สนุกครับ ลุ้นทั้งเรื่อง', 8),
+(19, 'PEERAUT', 'โคตรdarkkk', 8),
+(20, 'PEERAUT', 'สนุกจัดๆ', 5),
+(30, 'PEERAUT', 'ลึกซึ้งกินใจมาก', 7),
+(29, 'KritProm', 'อยากดูภาคต่อไปแล้วครับ สุดจัด', 10),
+(28, 'KritProm', 'ประทับใจจริงๆ ดูแล้วอยากมีแฟนเลยย งืออ', 9),
+(27, 'KritProm', 'โคตรเท่เลย ตอนสู้กันชอบมากครับ', 8),
+(26, 'KritProm', 'โคตรมันส์ครับ ชอบซันนี้มากกก', 9),
+(25, 'KritProm', 'ภาพสวยตระการตามากครับ', 10),
+(24, 'KritProm', 'ดูแล้วงงๆครับ', 2),
+(23, 'KritProm', 'ไม่อินเลย ครับ', 1),
+(22, 'KritProm', 'เกินบรรยายครับ', 6),
+(21, 'KritProm', 'สนุกมาก แนะนำเลยครับสายเกมเมอร์', 10),
+(13, 'minecraftpond', 'น้ำตาแตกฮะ', 7),
+(12, 'minecraftpond', 'สนุกมากก ลุ้นตัวเกร็ง', 8),
+(21, 'minecraftpond', 'โคตรชอบเลยฮ้าบบ', 9),
+(1, 'minecraftpond', 'เหมาะกับเด็กครับ', 1),
+(2, 'minecraftpond', 'จบแบบ ไม่ได้เรื่อง!!!', 0),
+(3, 'minecraftpond', 'very very good', 4),
+(3, 'minecraftpond', 'very very good', 4),
+(6, 'minecraftpond', 'Exellent', 6),
+(8, 'minecraftpond', 'soo funny', 10),
+(25, 'minecraftpond', 'สนุกมากคร้าบ', 7),
+(7, 'minecraftpond', 'เท่มากครับ', 6),
+(4, 'minecraftpond', 'หลอนได้ใจ', 7),
+(11, 'minecraftpond', 'เร้าใจครับ', 5),
+(16, 'minecraftpond', 'ชอบมากครับ', 9),
+(16, 'KritProm', 'ชอบมากๆครับ', 10);
 
 -- --------------------------------------------------------
 
