@@ -59,7 +59,7 @@
             <input type="hidden" name="movie_id" value="<?=$_GET["movie_id"]?>">
             <input type="hidden" name="username" value="<?=$_SESSION["username"]?>">
             <textarea name="moive_comment" rows="5" cols="40"></textarea><br class="flex">
-            คะเเนน 0-20 
+            คะเเนน 0-10
             <input type="number" name="movie_score" style="width: 30px;" pattern="^[0-9]{1,2}$" maxlength="2"  >
             <br>
             <br>
