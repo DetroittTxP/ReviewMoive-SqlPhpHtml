@@ -25,6 +25,12 @@
                 }
             }
         }
+
+        let plslogin1=()=>{
+        if(window.confirm("กรุณาเข้าสู่ระบบก่อนถึงจะทำการรีวิวได้ ต้องการเข้าสู่ระบบคลิก OK")){
+            window.location.href='../login/weblogin.php';
+        }
+    }
     </script>
     
 </head>
@@ -37,17 +43,14 @@
             </a>
             
         </div>
-        <div class="TYPE">
-            <a href="../ReviewMovie/index.php" style="color: black;">กลับไปหน้าหลัก</a>
-            
-        </div>
+      
        
         <ul class="logo">
                 <li>
-                    <a href="../register/register.html"><img src="../img/register2.png" alt="" width="150" height="50"></a>
+                    <a href="../register/webregister.php"><img src="../img/register2.png" alt="" width="150" height="50"></a>
                 </li>
                 <li>
-                    <a href="../login/login.php"><img src="../img/Login2.png" alt="" width="100" height="50"></a>
+                    <a href="../login/weblogin.php"><img src="../img/Login2.png" alt="" width="100" height="50"></a>
                 </li>
         </ul>
     </div>
