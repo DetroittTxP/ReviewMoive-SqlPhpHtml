@@ -23,6 +23,9 @@
             ชื่อเรื่อง: <?=$row["movie_name"]?><br>
             ประเภท: <?=$row["movie_type"]?><br>
             คะเเนน: <?=$row["movie_score"]?><br>
+            <a href="#" onclick="return plslogin1()">
+                <img src="img/review-button-png-hi.png" width = "70px">
+            </a>
             <br>
         </div>
 
