@@ -64,17 +64,22 @@
 
     <div class="flex">
         <?php
-             $sql= "SELECT movie_name,movie_type,movie_score FROM movie ORDER BY movie_score DESC LIMIT 0,5;";
+             $sql= "SELECT movie.movie_name,movie.movie_type, ROUND(AVG(movie_score),2)
+              FROM movie JOIN comment WHERE movie.movie_id = comment.movie_id 
+              GROUP BY movie_name
+             ORDER BY AVG(movie_score) DESC";
              $objQuery = mysqli_query($conn,$sql);
         ?>
         <?php
              while($row = mysqli_fetch_array($objQuery)){
         ?>
+
+    
         <div style="padding:30px"; text-align:center;>
             <img src="../img/ALLIMGS/<?=$row["movie_name"]?>.jpg" height="350px" ><br>
             ชื่อเรื่อง: <?=$row["movie_name"]?><br>
             ประเภท: <?=$row["movie_type"]?><br>
-            คะเเนน: <?=$row["movie_score"]?><br>
+            คะเเนน: <?=$row["ROUND(AVG(movie_score),2)"]?><br>
             <a href="#" onclick="return plslogin()">
                   <img src="img/review-button-png-hi.png" width = "70px">
             </a>
@@ -87,7 +92,7 @@
 
     <div class="flex2">
         <?php 
-            $sql ="SELECT * FROM movie WHERE movie_id <= 8";
+            $sql ="SELECT movie.movie_name,movie.movie_type, ROUND(AVG(movie_score),2) FROM movie JOIN comment WHERE movie.movie_id = comment.movie_id GROUP BY movie_name;";
             $objQuery = mysqli_query($conn,$sql);
         ?>
         <?php
@@ -97,7 +102,7 @@
             <img src="../img/ALLIMGS/<?=$row["movie_name"]?>.jpg" height="350px" ><br>
             ชื่อเรื่อง: <?=$row["movie_name"]?><br>
             ประเภท: <?=$row["movie_type"]?><br>
-            คะเเนน: <?=$row["movie_score"]?><br>
+            คะเเนน: <?=$row["ROUND(AVG(movie_score),2)"]?><br>
             <a href="#" onclick="return plslogin()">
                 <img src="img/review-button-png-hi.png" width = "70px">
             </a>
