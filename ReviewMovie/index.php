@@ -65,7 +65,7 @@
     <div class="flex">
         <?php
              $sql= "SELECT movie.movie_name,movie.movie_type, ROUND(AVG(movie_score),2)
-              FROM movie JOIN comment WHERE movie.movie_id = comment.movie_id 
+              FROM movie JOIN comment WHERE movie.movie_id = comment.movie_id AND movie_score >=7
               GROUP BY movie_name
              ORDER BY AVG(movie_score) DESC";
              $objQuery = mysqli_query($conn,$sql);
@@ -92,7 +92,10 @@
 
     <div class="flex2">
         <?php 
-            $sql ="SELECT movie.movie_name,movie.movie_type, ROUND(AVG(movie_score),2) FROM movie JOIN comment WHERE movie.movie_id = comment.movie_id GROUP BY movie_name;";
+            $sql ="SELECT movie.movie_name,movie.movie_type, 
+            ROUND(AVG(movie_score),2) FROM movie JOIN comment 
+            WHERE movie.movie_id = comment.movie_id  
+            GROUP BY movie_name;";
             $objQuery = mysqli_query($conn,$sql);
         ?>
         <?php
