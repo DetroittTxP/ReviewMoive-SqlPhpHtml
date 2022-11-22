@@ -12,7 +12,7 @@
 
     $sql = "SELECT movie.movie_name,movie.movie_type, ROUND(AVG(movie_score),2) 
     FROM movie JOIN comment 
-    WHERE movie_name LIKE '%$keyword%';
+    WHERE movie_name LIKE '%$keyword%' GROUP BY movie_name;
     ";
     $objQuery = mysqli_query($conn,$sql);
 ?>
