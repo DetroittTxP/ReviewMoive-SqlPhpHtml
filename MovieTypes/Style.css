@@ -1,0 +1,55 @@
+body{
+    text-align: center;
+    background-color: antiquewhite;
+}
+
+.topic{
+    width: 100%;
+    height: 150px;
+    background-color: rgb(172, 68, 140);
+    font-size: 50px;
+}
+
+
+.TYPE{
+    color: black;
+    position: relative;
+    top: 20px;
+    padding: 30px;
+    font-size: 20px;
+    display: inline-block;
+    justify-content: center;
+    word-spacing: 20px;
+    
+}
+
+.topic .move{
+    float: left;
+    text-align: center;
+}
+
+.move{
+    position: relative;
+    bottom:35px;
+    right: 20px;
+}
+
+.topic ul.logo{
+    list-style: none;
+    float: right;
+}
+
+.topic ul.logo li{
+    float: left;
+    margin-right: 15px;
+    padding-bottom: 20px;
+}
+
+.img{
+    padding-top: 30px;
+    
+}
+
+.information{
+    display: block;
+}
