@@ -37,6 +37,8 @@
                 }
             }
         }
+
+        
     </script>
     
 </head>
@@ -76,7 +78,7 @@
 
     <div class="flex">
         <?php
-            $main = $pdo->prepare("SELECT * FROM movie");
+            $main = $pdo->prepare("SELECT * FROM movie JOIN comment");
             $main->execute();
         ?>
         <?php
@@ -86,13 +88,13 @@
             <img src="../img/ALLIMGS/<?=$row["movie_id"]?>.jpg" height="350px" ><br>
                 ชื่อเรื่อง: <?=$row["movie_name"]?><br>
                 ประเภท: <?=$row["movie_type"]?><br>
-                คะแนน: <?=$row["movie_score"]?><br>
+                คะเเนน: <?=$row["movie_score"]?><br>
                 <a href="../reviewpage/reviewpage.php?movie_id=<?=$row["movie_id"]?>">
                     <img src="img/review-button-png-hi.png" width = "70px">
                 </a>
         </div>
                 
-
+        
             
         <?php } ?>             
     </div>
