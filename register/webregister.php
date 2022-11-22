@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>ReviewMovie Signin & Signup Form</title>
-	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="css/style.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script>
          let checkpassword = () =>{
@@ -47,6 +47,8 @@
 					<div class="field">
 						<input type="submit" value="Signup" onclick="return checkpassword()">
 					</div>
+
+					<div class="signup-link">Already a Member <a href="../login/weblogin.php">Login Now</a></div>
 				</form>
 			</div>
 		</div>
