@@ -17,28 +17,7 @@
             if(ans == true){
                 document.location = "index.php"
             }
-        }
-
-
-        let send=()=>{
-            request = new XMLHttpRequest();
-            request.onreadystatechange = showResult;
-
-            let keyword = document.getElementById("keyword").value;
-            let url = "indexlogedajax.php?keyword=" + keyword;
-            request.open("GET",url,true);
-            request.send(null);
-        }
-
-        let showResult = () =>{
-            if(request.readyState == 4){
-                if(request.status == 200){
-                    document.getElementById("result").innerHTML = request.responseText;
-                }
-            }
-        }
-
-        
+        } 
     </script>
     
 </head>
@@ -61,8 +40,7 @@
                 <li><a href="../MovieTypes/Fantasy.php" style="color: black;">Fantasy</a></li>
                 <li><a href="../MovieTypes/Romatic.php" style="color: black;">Romantic</a><br><br></li>
             </ul>
-            พิมชื่อหนังที่ต้องการได้เลย
-            <input title="" type="text" id="keyword" onkeyup="send()">
+            <a href="../SearchPage/searchloged.php">ค้นหาหนังที่ต้องการได้ที่นี่</a>
         </div>
        
        
@@ -106,7 +84,7 @@
         <?php
                 while($row=$sec->fetch()){
             ?>
-            <div style="padding:30px"; text-align:center; id="result">
+            <div style="padding:30px"; text-align:center; >
                 <img src="../img/ALLIMGS/<?=$row["movie_id"]?>.jpg" height="350px" ><br>
                     ชื่อเรื่อง: <?=$row["movie_name"]?><br>
                     ประเภท: <?=$row["movie_type"]?><br>
@@ -131,7 +109,7 @@
         <?php
                 while($row=$sec->fetch()){
             ?>
-            <div style="padding:30px"; text-align:center; id="result">
+            <div style="padding:30px"; text-align:center; >
                 <img src="../img/ALLIMGS/<?=$row["movie_id"]?>.jpg" height="350px" ><br>
                     ชื่อเรื่อง: <?=$row["movie_name"]?><br>
                     ประเภท: <?=$row["movie_type"]?><br>
@@ -140,7 +118,9 @@
                     </a>
             </div>
      
-        <?php } ?>             
+        <?php } ?>      
+        
+        <div id="result"> </div>
 </div>
 
 </body>

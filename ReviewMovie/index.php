@@ -15,7 +15,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>MainPage</title>
-    <link rel="stylesheet" href="style.css">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@100&display=swap" rel="stylesheet">
@@ -26,6 +26,139 @@
         }
     }
     </script>
+
+    <style>
+        @media (min-width:501px){
+            body{
+            text-align: center;
+            background-color: beige;
+            font-family: 'Kanit', sans-serif;
+            font-weight: bolder;
+            
+        }
+
+        body > .topic{
+            width: 100%;
+            height: 150px;
+            background-color: lightgray;
+            font-size: 50px;
+        }
+
+        #move{
+        position: relative;
+        bottom: 30px;
+        right: 20px;
+        }
+
+        .topic #move{
+            float: left;
+            text-align: center;
+        }
+
+        .TYPE{
+            color: black;
+            position: relative;
+            top: 20px;
+            padding: 10px;
+            font-size: 20px;
+            display: inline-block;
+            justify-content: center;
+            word-spacing: 20px;
+        }
+
+        .TYPE ul.MENUTYPE{
+            list-style: none;
+        }
+
+        .TYPE ul.MENUTYPE li{
+            float: left;
+            margin-right: 45px;
+        }
+
+        .TYPE ul.MENUTYPE li a{
+            text-decoration: none;
+            color: #333;
+            border-bottom: 2px solid transparent;
+            padding-bottom: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .TYPE ul.MENUTYPE li a:hover{
+            border-bottom: 2px solid black;
+            padding-bottom: 0;
+        }
+
+        .topic ul.logo{
+            list-style: none;
+            float: right;
+        }
+
+        .topic ul.logo li{
+            float: left;
+            margin-right: 15px;
+            padding-bottom: 20px;
+        }
+
+        .img{
+        display: block;
+        padding: 30px;
+            
+            
+        }
+
+        .information{
+            display: inline-flex;
+        }
+
+        .flex{
+            display: flex;
+            justify-content: center;
+            margin: auto;
+            padding-right: 270px;
+        }
+
+
+        .flex2{
+            display: flex;
+            justify-content: center;
+            margin: auto;
+            padding-right: 70px;
+        }
+
+        .logo{
+            font-size: 45px;
+        }
+
+        body::-webkit-scrollbar {
+            width: 1em;
+        }
+        
+        body::-webkit-scrollbar-track {
+            box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+        }
+        
+        body::-webkit-scrollbar-thumb {
+            background-color: rgb(88, 21, 0);
+            outline: 1px solid rgb(10, 1, 1);
+        }
+
+        h2{
+            color: red;
+        }
+
+        input[title]{
+            background-color: #A1C3D8;
+        }
+             }
+
+        
+        @media (max-width:500px){
+            body{
+                background: red;
+                display:block;
+            }
+        }     
+    </style>
 </head>
 
 <body>
