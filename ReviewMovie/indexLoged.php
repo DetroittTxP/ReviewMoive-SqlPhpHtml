@@ -46,7 +46,7 @@
 
     
 <div class="topic">
-        <div class="move">
+        <div id="move">
             <a href="../ReviewMovie/index.php">
                      <img src="../img/LogoWeb.png" alt="" height="215px" width="100%">
              </a>
@@ -62,7 +62,7 @@
                 <li><a href="../MovieTypes/Romatic.php" style="color: black;">Romantic</a><br><br></li>
             </ul>
             พิมชื่อหนังที่ต้องการได้เลย
-            <input type="text" id="keyword" onkeyup="send()">
+            <input title="" type="text" id="keyword" onkeyup="send()">
         </div>
        
        
@@ -74,9 +74,9 @@
                     <a href="../logout/logout.php" onclick='confirmlogout()' >Logout</a>
                 </li>
         </ul>
-    </div>
+</div>
 
-    <div class="flex">
+<div class="flex">
         <?php
             $main = $pdo->prepare("SELECT * FROM movie WHERE movie_id <=10");
             $main->execute();
@@ -93,12 +93,10 @@
                 </a>
         </div>
                 
-        
-            
         <?php } ?>             
-    </div>
+</div>
     <br>
-    <div class="flex">    
+<div class="flex">    
         
         <?php
             $sec = $pdo->prepare("SELECT * FROM movie WHERE movie_id > 10 AND movie_id <=20");
@@ -117,15 +115,13 @@
                     </a>
             </div>
                     
-            
-                
             <?php } ?>             
    
 
-     </div>
-     <br>
+</div>
+    <br>
 
-     <div class="flex">    
+<div class="flex">    
         
         <?php
             $sec = $pdo->prepare("SELECT * FROM movie WHERE movie_id > 20");
@@ -143,16 +139,9 @@
                         <img src="img/review-button-png-hi.png" width = "70px">
                     </a>
             </div>
-                    
-            
-                
-            <?php } ?>             
-   
+     
+        <?php } ?>             
+</div>
 
-     </div>
-
-    
-  
-   
 </body>
 </html>

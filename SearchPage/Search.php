@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Searchpage</title>
-    <link rel="stylesheet" href="search.css">
+    <link rel="stylesheet" href="Style.css">
     <script>
-        let send=()=>{
+        let send =()=>{
             request = new XMLHttpRequest();
             request.onreadystatechange = showResult;
 
@@ -18,7 +18,7 @@
             request.send(null);
         }
 
-        let showResult = () =>{
+        let showResult =()=>{
             if(request.readyState == 4){
                 if(request.status == 200){
                     document.getElementById("result").innerHTML = request.responseText;
@@ -40,10 +40,8 @@
         <div class="move">
             <a href="../ReviewMovie/index.php">
                 <img src="../img/LogoWeb.png" alt="" height="215px" width="100%">
-            </a>
-            
+            </a>   
         </div>
-      
        
         <ul class="logo">
                 <li>
@@ -62,13 +60,7 @@
      </div>
 
      <div class="img" id="result">  </div>
-
      <div class="information" id="result"></div>
-    
-  
-  
-
-    
     
 </body>
 </html>

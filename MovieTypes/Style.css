@@ -23,12 +23,12 @@ body{
     
 }
 
-.topic .move{
+.topic #move{
     float: left;
     text-align: center;
 }
 
-.move{
+#move{
     position: relative;
     bottom:35px;
     right: 20px;

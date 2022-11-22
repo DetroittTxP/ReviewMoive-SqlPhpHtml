@@ -31,7 +31,7 @@
 <body>
     
     <div class="topic">
-        <div class="move">
+        <div id="move">
                  <a href="../ReviewMovie/index.php">
                      <img src="../img/LogoWeb.png" alt="" height="215px" width="100%">
                 </a>
@@ -60,7 +60,7 @@
         </ul>
     </div>
 
-    <h2 style="text-align: center; ">หนังมาเเรงช่วงนี้!!!!</h2>
+    <h2 title="text1" style="text-align: center; ">หนังมาเเรงช่วงนี้!!!!</h2>
 
     <div class="flex">
         <?php
@@ -86,9 +86,10 @@
         </div>
         <?php } ?> 
     </div>
+
     <hr style="border: 1px solid black;">
 
-    <h2 style="text-align: center; ">หนังดีอีกมากมาย</h2>
+    <h2 title="text1" style="text-align: center; ">หนังดีอีกมากมาย</h2>
 
     <div class="flex2">
         <?php 
@@ -113,7 +114,6 @@
 
         <?php } ?>
     </div>
-    
   
     
 </body>
