@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>ActionPage</title>
+    <title>Sci-Fi</title>
     <link rel="stylesheet" href="Style.css">
 </head>
 
@@ -13,6 +13,14 @@
     $action =$pdo->prepare("SELECT * FROM movie WHERE movie_type='Sci-fi' " );
     $action->execute();
 ?>
+
+<script>
+        let plslogin=()=>{
+        if(window.confirm("กรุณาเข้าสู่ระบบก่อนถึงจะทำการรีวิวได้ ต้องการเข้าสู่ระบบคลิก OK")){
+            window.location.href='../login/weblogin.php';
+        }
+    }
+</script>
 <body >
     
     <div class="topic">
@@ -42,6 +50,9 @@
         ประเภท: <?=$row["movie_type"]?><br>
 
         <br>
+        <a href="../reviewpage/reviewpage.php?movie_id=<?=$row["movie_id"]?>" onclick="return plslogin()">
+             <img src="../ReviewMovie/img/review-button-png-hi.png" width = "70px">
+        </a>
         
     </div>
     <?php } ?>

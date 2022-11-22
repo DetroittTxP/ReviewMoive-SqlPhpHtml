@@ -9,6 +9,15 @@
     <link rel="stylesheet" href="Style.css">
 </head>
 
+
+<script>
+        let plslogin=()=>{
+        if(window.confirm("กรุณาเข้าสู่ระบบก่อนถึงจะทำการรีวิวได้ ต้องการเข้าสู่ระบบคลิก OK")){
+            window.location.href='../login/weblogin.php';
+        }
+    }
+</script>
+
 <?php 
     $action =$pdo->prepare("SELECT * FROM movie WHERE movie_type='Comedy' " );
     $action->execute();
@@ -41,6 +50,10 @@
         ชื่อเรื่อง: <?=$row["movie_name"]?><br>
         ประเภท: <?=$row["movie_type"]?><br>
         <br>
+
+        <a href="../reviewpage/reviewpage.php?movie_id=<?=$row["movie_id"]?>" onclick="return plslogin()">
+             <img src="../ReviewMovie/img/review-button-png-hi.png" width = "70px">
+        </a>
         
     </div>
     <?php } ?>
