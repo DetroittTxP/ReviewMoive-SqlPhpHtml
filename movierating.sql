@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 22, 2022 at 10:36 AM
+-- Generation Time: Nov 22, 2022 at 10:54 AM
 -- Server version: 10.4.25-MariaDB
 -- PHP Version: 8.1.10
 
@@ -155,7 +155,7 @@ INSERT INTO `movie` (`movie_id`, `movie_name`, `movie_type`) VALUES
 (17, 'FAST & FURIOUS 7', 'Action'),
 (18, 'HOME STAY', 'Fantasy'),
 (19, 'THE BATMAN', 'Action'),
-(20, 'MALEFICENT: MISTRESS OF EVIL', 'Fantasy'),
+(20, 'MALEFICENT MISTRESS OF EVIL', 'Fantasy'),
 (21, 'READY PLAYER ONE', 'SCI-FI'),
 (22, '365 DAYS', 'Romantic'),
 (23, 'BLADE RUNNER 2049', 'SCI-FI'),
@@ -164,7 +164,7 @@ INSERT INTO `movie` (`movie_id`, `movie_name`, `movie_type`) VALUES
 (26, 'BROTHER OF THE YEARS', 'Romantic'),
 (27, 'PACIFIC RIM', 'SCI-FI'),
 (28, 'REDEEMING LOVE', 'Romantic'),
-(29, 'JURASSIC WORLD : DOMINION', 'SCI-FI'),
+(29, 'JURASSIC WORLD DOMINION', 'SCI-FI'),
 (30, 'ME BEFORE YOU', 'Romantic');
 
 -- --------------------------------------------------------
