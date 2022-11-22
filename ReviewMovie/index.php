@@ -46,10 +46,10 @@
        
         <ul class="logo">
                 <li>
-                    <a href="../register/register.html"><img src="../img/Register2.png" alt="" width="170" height="50"></a>
+                    <a href="../register/webregister.php"><img src="../img/Register2.png" alt="" width="170" height="50"></a>
                 </li>
                 <li>
-                    <a href="../login/login.php"><img src="../img/Login2.png" alt="" width="100" height="50"></a>
+                    <a href="../login/weblogin.php"><img src="../img/Login2.png" alt="" width="100" height="50"></a>
                 </li>
         </ul>
     </div>
