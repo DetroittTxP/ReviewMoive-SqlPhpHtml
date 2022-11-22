@@ -44,6 +44,12 @@
 						<input type="email" name="email" placeholder="Email" required>
 					</div>
 
+					<div class="Check">Please type the required numbers: M48d9a</div>
+
+					<div class="field">
+						<input type="text" name="Check-pass" placeholder="Please Enter Number" pattern="M48d9a" required>
+					</div>
+
 					<div class="field">
 						<input type="submit" value="Signup" onclick="return checkpassword()">
 					</div>

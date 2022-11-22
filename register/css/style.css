@@ -73,6 +73,11 @@ html,body{
     font-size: 12px;
 }
 
+.form-inner form .Check{
+    padding-top: 20px;
+    font-size: 15px;
+}
+
 .form-inner form .pass-link a,
 .form-inner form .signup-link a{
     color: #2017a3;
