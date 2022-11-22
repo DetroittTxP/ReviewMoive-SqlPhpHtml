@@ -94,7 +94,7 @@
         <?php 
             $sql ="SELECT movie.movie_name,movie.movie_type, 
             ROUND(AVG(movie_score),2) FROM movie JOIN comment 
-            WHERE movie.movie_id = comment.movie_id  
+            WHERE movie.movie_id = comment.movie_id AND movie_score >=5
             GROUP BY movie_name;";
             $objQuery = mysqli_query($conn,$sql);
         ?>
