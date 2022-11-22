@@ -21,7 +21,7 @@
 <body>
 	<div class="wrapper">
 		<div class="title-text">
-			<div class="title signin">Login Form</div>
+		
 			<div class="title signup">Signup Form</div>
 		</div>
 			
@@ -31,29 +31,22 @@
 					<div class="field">
 						<input type="text" name="username" placeholder="Username" required>
 					</div>
-
 					<div class="field">
 						<input type="password" name="password" placeholder="Password" id="CheckPass1" required>
 					</div>
-
 					<div class="field">
 						<input type="password" name="re-password" placeholder="Confirm password" id="CheckPass2" required>
 					</div>
-
                     <div class="field">
 						<input type="email" name="email" placeholder="Email" required>
 					</div>
-
 					<div class="Check">Please type the required numbers: M48d9a</div>
-
 					<div class="field">
 						<input type="text" name="Check-pass" placeholder="Please Enter Number" pattern="M48d9a" required>
 					</div>
-
 					<div class="field">
 						<input type="submit" value="Signup" onclick="return checkpassword()">
 					</div>
-
 					<div class="signup-link">Already a Member <a href="../login/weblogin.php">Login Now</a></div>
 				</form>
 			</div>
