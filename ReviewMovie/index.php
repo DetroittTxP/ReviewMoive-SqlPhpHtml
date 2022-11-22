@@ -19,7 +19,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@100&display=swap" rel="stylesheet">
-    <script src="script/loginfirst.js"></script>
+    <script>
+        let plslogin=()=>{
+        if(window.confirm("กรุณาเข้าสู่ระบบก่อนถึงจะทำการรีวิวได้ ต้องการเข้าสู่ระบบคลิก OK")){
+            window.location.href='../login/weblogin.php';
+        }
+    }
+    </script>
 </head>
 
 <body>
@@ -58,7 +64,7 @@
 
     <div class="flex">
         <?php
-             $sql= "SELECT * FROM movie ORDER BY movie_score DESC LIMIT 0,5;";
+             $sql= "SELECT movie_name,movie_type,movie_score FROM movie ORDER BY movie_score DESC LIMIT 0,5;";
              $objQuery = mysqli_query($conn,$sql);
         ?>
         <?php
