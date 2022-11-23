@@ -60,20 +60,18 @@
             <input type="hidden" name="username" value="<?=$_SESSION["username"]?>">
             <textarea name="moive_comment" rows="5" cols="40"></textarea><br class="flex">
             คะเเนน 0-10
-            <input type="number" name="movie_score" style="width: 30px;" pattern="^[0-9]{1,2}$" maxlength="2"  >
+            <input type="text" name="movie_score" style="width: 30px;" pattern="^[0-9]{1,2}$" maxlength="2"  >
             <br>
             <br>
             <input type="submit" value="ส่งรีวิว">
 
             <div>
         <h2>รีวิวจากคนอื่นๆ</h2>
-
+    
             <?php
                 $id = $_GET["movie_id"];
                 $sec = $pdo->prepare("SELECT username,movie_comment FROM comment WHERE movie_id = $id ");
                 $sec->execute();
-
-                
             ?>
 
             <?php
@@ -81,7 +79,7 @@
                 ?>
                 <div style="padding:5px"; text-align:center; >
                         ชื่อผู้ใช้: <?=$row["username"]?>
-                        คอมเม้นว่า: <?=$row["movie_comment"]?>
+                       - <?=$row["movie_comment"]?>
                 </div>
         
             <?php } ?>      

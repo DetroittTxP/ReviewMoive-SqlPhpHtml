@@ -7,11 +7,10 @@
         mysqli_select_db($conn,"movierating");
         mysqli_query($conn,"SET NAMES utf8");
     } else {
-        echo mysql_errno();
+        echo "error";
     }
 
-    $sql = "SELECT movie.movie_name,movie.movie_type, ROUND(AVG(movie_score),2) 
-    FROM movie JOIN comment 
+    $sql = "SELECT movie.movie_name,movie.movie_type, ROUND(AVG(movie_score),2) FROM movie JOIN comment 
     WHERE movie_name LIKE '%$keyword%' GROUP BY movie_name;
     ";
     $objQuery = mysqli_query($conn,$sql);

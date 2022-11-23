@@ -6,7 +6,7 @@
         mysqli_select_db($conn,"movierating");
         mysqli_query($conn,"SET NAMES utf8");
     } else {
-        echo mysql_errno();
+        echo "error";
     }
 ?>   
 <head>
@@ -20,6 +20,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@100&display=swap" rel="stylesheet">
     <script>
+        
         let plslogin=()=>{
         if(window.confirm("กรุณาเข้าสู่ระบบก่อนถึงจะทำการรีวิวได้ ต้องการเข้าสู่ระบบคลิก OK")){
             window.location.href='../login/weblogin.php';
@@ -152,12 +153,136 @@
              }
 
         
-        @media (max-width:500px){
+             @media (max-width:599px){
+
             body{
-                background: red;
-                display:block;
+                text-align: center;
+                background-color: beige;
+                font-family: 'Kanit', sans-serif;
+                font-weight: bolder;
+
             }
-        }     
+
+            h2{
+                position: relative;
+                top:300px;
+                right:130px;
+                
+            }
+
+            .logo{
+                font-size: 45px;
+                position: relative;
+                right:50px;
+            }
+
+            .topic{
+                width: 100%;
+                height: 150px;
+                background-color: lightgray;
+                font-size: 50px;
+            }
+            #move{
+                position: relative;
+                bottom:30px;
+                left:20px;
+
+            }
+
+
+
+            .information{
+                display: block;
+            }
+
+            .flex{
+                display: block;
+                margin: auto;
+            }
+
+
+            .flex2{
+                display:block;
+                text-align: center;
+                position: relative;
+
+            }
+
+            .TYPE{
+                color: black;
+                position: relative;
+                top: 20px;
+                padding: 10px;
+                right:5px;
+                
+                font-size: 20px;
+                
+
+                word-spacing: 10px;
+            }
+
+            .TYPE ul.MENUTYPE{
+                list-style: none;
+            }
+
+            .TYPE ul.MENUTYPE li{
+                float: left;
+                margin-right: 45px;
+            }
+
+            .TYPE ul.MENUTYPE li a{
+                text-decoration: none;
+                color: #333;
+                border-bottom: 2px solid transparent;
+                padding-bottom: 10px;
+                transition: all 0.3s ease;
+            }
+
+            .TYPE ul.MENUTYPE li a:hover{
+                border-bottom: 2px solid black;
+                padding-bottom: 0;
+            }
+
+            .topic .move{
+                float: left;
+                text-align: center;
+            }
+
+            .topic ul.logo{
+                list-style: none;
+                float: right;
+            }
+
+            .topic ul.logo li{
+                float: left;
+                margin-right: 15px;
+                padding-bottom: 20px;
+            }
+
+            .marang{
+                position: relative;
+                top:342px;
+                left: 10px;
+            }
+
+            .MENUTYPE{
+                word-spacing: 10px;
+            }
+
+
+            .see{
+                display: block;
+            
+
+            }
+            
+            #mark{
+                position: relative;
+                bottom: 100px;
+                
+            }
+        
+        }
     </style>
 </head>
 
@@ -179,7 +304,7 @@
                 <li><a href="../MovieTypes/Fantasy.php" style="color: black;">Fantasy</a></li>
                 <li><a href="../MovieTypes/Romatic.php" style="color: black;">Romantic</a><br><br></li>
             </ul>
-            <a href="../SearchPage/Search.php">ค้นหาหนังที่ต้องการได้เลยคลิก!</a>  
+            <a href="../SearchPage/Search.php" class="see">ค้นหาหนังที่ต้องการได้เลยคลิก!</a>  
         </div>
        
        
@@ -193,12 +318,12 @@
         </ul>
     </div>
 
-    <h2 title="text1" style="text-align: center; ">หนังมาเเรงช่วงนี้!!!!</h2>
+    <h2 title="text1" style="text-align: center; " class="marang" >หนังมาเเรงช่วงนี้!!!!</h2>
 
     <div class="flex">
         <?php
              $sql= "SELECT movie.movie_name,movie.movie_type, ROUND(AVG(movie_score),2)
-              FROM movie JOIN comment WHERE movie.movie_id = comment.movie_id AND movie_score >=7
+              FROM movie JOIN comment WHERE movie.movie_id = comment.movie_id AND movie_score = 10
               GROUP BY movie_name
              ORDER BY AVG(movie_score) DESC";
              $objQuery = mysqli_query($conn,$sql);
@@ -222,7 +347,7 @@
 
     <hr style="border: 1px solid black;">
 
-    <h2 title="text1" style="text-align: center; ">หนังดีอีกมากมาย</h2>
+    <h2 title="text1" style="text-align: center; " id="mark">หนังดีอีกมากมาย</h2>
 
     <div class="flex2">
         <?php 
