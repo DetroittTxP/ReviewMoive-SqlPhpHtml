@@ -20,8 +20,18 @@
     }
     else{
         echo "ชื่อหรือรหัสผ่านของคุณไม่ถูกต้อง โปรดลองอีกครั้ง<br>";
-        echo "<a href='login.php'>เข้าสู่ระบบอีกครั้ง</a>";
+        echo "<a href='weblogin.php'>เข้าสู่ระบบอีกครั้ง</a>";
     }
 
+    
+
 ?>
+
+<script>
+     window.onload=()=>{
+            if(window.confirm("ชื่อหรือรหัสผ่านของคุณไม่ถูกต้อง โปรดลองอีกครั้ง")){
+                window.location.href='weblogin.php';
+            }
+        }
+</script>
 

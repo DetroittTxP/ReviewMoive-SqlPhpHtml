@@ -20,7 +20,7 @@
     <script>
         window.onload=()=>{
             if(window.confirm("สมัครสมาชิกสำเร็จเเล้วคลิก OK เพื่อไปหน้าเข้าสู่ระบบ")){
-                window.location.href='../login/login.php';
+                window.location.href='../login/weblogin.php';
             }
         }
     </script>

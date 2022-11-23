@@ -7,10 +7,11 @@
         mysqli_select_db($conn,"movierating");
         mysqli_query($conn,"SET NAMES utf8");
     } else {
-        echo "error";
+        echo mysql_errno();
     }
 
-    $sql = "SELECT movie.movie_name,movie.movie_type, ROUND(AVG(movie_score),2) FROM movie JOIN comment 
+    $sql = "SELECT movie.movie_id,movie.movie_name,movie.movie_type, ROUND(AVG(movie_score),2) 
+    FROM movie JOIN comment 
     WHERE movie_name LIKE '%$keyword%' GROUP BY movie_name;
     ";
     $objQuery = mysqli_query($conn,$sql);
@@ -25,9 +26,9 @@
             ชื่อเรื่อง: <?=$row["movie_name"]?><br>
             ประเภท: <?=$row["movie_type"]?><br>
             คะเเนน: <?=$row["ROUND(AVG(movie_score),2)"]?><br>
-            <a href="#" onclick="return plslogin1()">
-                <img src="img/review-button-png-hi.png" width = "70px">
-            </a>
+            <a href="../reviewpage/reviewpage.php?movie_id=<?=$row["movie_id"]?>">
+                  <img src="img/review-button-png-hi.png" width = "70px">
+             </a>
             <br>
             <br>
         </div>

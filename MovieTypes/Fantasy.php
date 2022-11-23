@@ -6,8 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>ActionPage</title>
-    <link rel="stylesheet" href="StyleMovieType/Style.css">
+    <link rel="stylesheet" href="Style.css">
 </head>
+
+<script>
+        let plslogin=()=>{
+        if(window.confirm("กรุณาเข้าสู่ระบบก่อนถึงจะทำการรีวิวได้ ต้องการเข้าสู่ระบบคลิก OK")){
+            window.location.href='../login/weblogin.php';
+        }
+    }
+</script>
 
 <?php 
     $action =$pdo->prepare("SELECT * FROM movie WHERE movie_type='Fantasy' " );
@@ -16,20 +24,18 @@
 <body >
     
     <div class="topic">
-        <div class="move">
-                MoviesRatings
-        </div>
-        <div class="TYPE">
-            <a href="../ReviewMovie/index.php" style="color: black;">กลับไปหน้าหลัก</a>
-            
+        <div id="move">
+             <a href="../ReviewMovie/index.php">
+                    <img src="../img/LogoWeb.png" alt="" height="215px" width="100%">
+             </a>
         </div>
        
         <ul class="logo">
                 <li>
-                    <a href="../register/register.html"><img src="../img/register.png" alt="" width="150" height="50"></a>
+                    <a href="../register/webregister.php"><img src="../img/Register2.png" alt="" width="150" height="50"></a>
                 </li>
                 <li>
-                    <a href="../login/login.php"><img src="../img/login.png" alt="" width="100" height="40"></a>
+                    <a href="../login/weblogin.php"><img src="../img/Login2.png" alt="" width="100" height="50"></a>
                 </li>
         </ul>
     </div>
@@ -42,8 +48,14 @@
     <div class="information">
         ชื่อเรื่อง: <?=$row["movie_name"]?><br>
         ประเภท: <?=$row["movie_type"]?><br>
-        คะเเนน: <?=$row["movie_score"]?><br>
+        
         <br>
+        
+        <a href="../reviewpage/reviewpage.php?movie_id=<?=$row["movie_id"]?>" onclick="return plslogin()">
+                    <img src="../ReviewMovie/img/review-button-png-hi.png" width = "70px">
+                </a>
+
+
         
     </div>
     <?php } ?>
