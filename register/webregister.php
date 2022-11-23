@@ -29,7 +29,11 @@
 			<div class="form-inner">
 				<form action="RegisterMove.php" class="signup" method="post">
 					<div class="field">
+<<<<<<< HEAD
 						<input type="text" name="username" placeholder="Username" pattern="[a-zA-z]" required>
+=======
+						<input type="text" name="username" placeholder="Username" required>
+>>>>>>> 7e5c3b53d394d64c421a63832fbe240c98c65af1
 					</div>
 					<div class="field">
 						<input type="password" name="password" placeholder="Password" id="CheckPass1" required>
